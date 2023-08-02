@@ -23,6 +23,7 @@ public class Article  extends  AbstractEntity{
     @Column(name = "designation")
     private String designation;
 
+
     @Column(name = "prixunitaireht")
     private BigDecimal prixUnitaireHt;
 

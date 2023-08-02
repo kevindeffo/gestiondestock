@@ -1,10 +1,11 @@
 package com.desktech.gestiondestock.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
@@ -12,4 +13,14 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "lignevente")
 public class LigneVente extends AbstractEntity{
+
+    @ManyToOne
+    @JoinColumn(name = "idvente")
+    private  Ventes vente;
+
+    @Column(name = "quantite")
+    private BigDecimal quatite;
+
+    @Column(columnDefinition = "prixUnitaire")
+    private BigDecimal prixUnitaire;
 }

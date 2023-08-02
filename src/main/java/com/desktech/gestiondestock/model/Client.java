@@ -1,10 +1,7 @@
 package com.desktech.gestiondestock.model;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -35,7 +32,8 @@ public class Client extends AbstractEntity {
     @Column(name = "telephone")
     private  String telephone;
 
-    //Adresse addresse
+    @Embedded
+    private  Adresse addresse;
 
     @OneToMany(mappedBy = "client")
     List<CommandeClient> commandeClients;

@@ -1,7 +1,6 @@
 package com.desktech.gestiondestock.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,4 +11,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "role")
 public class Roles extends AbstractEntity{
+
+    @Column(name = "roleName")
+    private String roleName;
+
+    @ManyToOne
+    @JoinColumn(name = "idUtilisateur")
+    private Utilisateur utilisateur;
 }

@@ -1,10 +1,13 @@
 package com.desktech.gestiondestock.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.desktech.gestiondestock.enums.TypeMouvementStock;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.time.Instant;
 
 @Data
 @NoArgsConstructor
@@ -12,4 +15,17 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "mouvementstock")
 public class MouvementStock extends AbstractEntity{
+
+    @ManyToOne
+    @JoinColumn(name = "idarticle")
+    private Article article;
+
+    @Column(name = "dateMouvement")
+    private Instant dateMouvement;
+
+    @Column(name = "quantite")
+    private BigDecimal quantite;
+
+    @Column(name = "typemouvementStock")
+    private TypeMouvementStock typeMouvementStock;
 }
