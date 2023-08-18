@@ -2,10 +2,7 @@ package com.desktech.gestiondestock.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -15,6 +12,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "fournisseur")
+@Builder
 public class Fournisseur extends AbstractEntity {
 
     @Column(name = "nom")
@@ -36,5 +34,5 @@ public class Fournisseur extends AbstractEntity {
     Adresse addresse;
 
     @OneToMany(mappedBy = "fournisseur")
-    List<CommandeFournisseur> commandeFournisseurs;
+    private List<CommandeFournisseur> commandeFournisseurs;
 }

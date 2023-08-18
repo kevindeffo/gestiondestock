@@ -3,15 +3,13 @@ package com.desktech.gestiondestock.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
+@Builder
 public class Adresse {
     @Column(name = "adresse1")
     private String adresse1;

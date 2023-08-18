@@ -2,6 +2,7 @@ package com.desktech.gestiondestock.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "utilisateur")
+@Builder
 public class Utilisateur extends AbstractEntity{
 
     @Column(name = "nom")

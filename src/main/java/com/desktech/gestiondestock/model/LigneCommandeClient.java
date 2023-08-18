@@ -2,6 +2,7 @@ package com.desktech.gestiondestock.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Entity
 @Table(name = "lignecommandeclient")
+@Builder
 public class LigneCommandeClient extends AbstractEntity{
 
     @ManyToOne
