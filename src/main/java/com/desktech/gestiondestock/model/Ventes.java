@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @Entity
 @Table(name = "vente")
+@Builder
 public class Ventes extends AbstractEntity{
 
     @Column(name = "code")

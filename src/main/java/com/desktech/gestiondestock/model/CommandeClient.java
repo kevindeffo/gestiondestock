@@ -3,6 +3,7 @@ package com.desktech.gestiondestock.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "commandeclient")
+@Builder
 public class CommandeClient extends AbstractEntity {
     @Column(name = "code")
     private String code;

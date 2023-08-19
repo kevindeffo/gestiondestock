@@ -3,6 +3,7 @@ package com.desktech.gestiondestock.model;
 import com.desktech.gestiondestock.enums.TypeMouvementStock;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @Entity
 @Table(name = "mouvementstock")
+@Builder
 public class MouvementStock extends AbstractEntity{
 
     @ManyToOne

@@ -2,10 +2,7 @@ package com.desktech.gestiondestock.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.Instant;
 import java.util.List;
@@ -16,6 +13,7 @@ import java.util.List;
 @Entity
 @EqualsAndHashCode(callSuper = true)
 @Table(name = "commandefournisseur")
+@Builder
 public class CommandeFournisseur extends AbstractEntity{
 
     @Column(name = "code")
