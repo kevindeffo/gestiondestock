@@ -3,10 +3,12 @@ package com.desktech.gestiondestock.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,13 +16,13 @@ import java.math.BigDecimal;
 @Table(name = "lignevente")
 public class LigneVente extends AbstractEntity{
 
-    @ManyToOne
-    @JoinColumn(name = "idvente")
-    private  Ventes vente;
-
     @Column(name = "quantite")
     private BigDecimal quatite;
 
-    @Column(columnDefinition = "prixUnitaire")
+    @Column(name = "prixUnitaire")
     private BigDecimal prixUnitaire;
+
+    @ManyToOne
+    @JoinColumn(name = "idvente")
+    private  Ventes vente;
 }

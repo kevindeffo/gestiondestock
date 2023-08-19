@@ -22,7 +22,7 @@ public class Adresse {
     @Column(name = "ville")
     private String ville;
 
-    @Column(name = "codePostale")
+    @Column(name = "code_postale")
     private String codePostale;
 
     @Column(name = "pays")
