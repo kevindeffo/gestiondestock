@@ -9,7 +9,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
-@Builder
 public class Adresse {
     @Column(name = "adresse1")
     private String adresse1;

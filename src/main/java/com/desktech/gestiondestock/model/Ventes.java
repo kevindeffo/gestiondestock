@@ -17,7 +17,6 @@ import java.time.Instant;
 @AllArgsConstructor
 @Entity
 @Table(name = "vente")
-@Builder
 public class Ventes extends AbstractEntity{
 
     @Column(name = "code")

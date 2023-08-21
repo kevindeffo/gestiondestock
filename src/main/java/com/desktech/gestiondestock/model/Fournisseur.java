@@ -12,7 +12,6 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "fournisseur")
-@Builder
 public class Fournisseur extends AbstractEntity {
 
     @Column(name = "nom")

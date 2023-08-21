@@ -12,7 +12,6 @@ import java.math.BigDecimal;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "article")
-@Builder
 public class Article  extends  AbstractEntity{
 
     @Column(name = "codearticle")

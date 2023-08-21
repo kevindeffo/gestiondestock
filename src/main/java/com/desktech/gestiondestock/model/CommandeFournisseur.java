@@ -13,7 +13,6 @@ import java.util.List;
 @Entity
 @EqualsAndHashCode(callSuper = true)
 @Table(name = "commandefournisseur")
-@Builder
 public class CommandeFournisseur extends AbstractEntity{
 
     @Column(name = "code")

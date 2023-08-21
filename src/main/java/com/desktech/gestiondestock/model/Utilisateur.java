@@ -16,7 +16,6 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "utilisateur")
-@Builder
 public class Utilisateur extends AbstractEntity{
 
     @Column(name = "nom")

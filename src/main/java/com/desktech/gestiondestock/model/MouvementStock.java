@@ -17,7 +17,6 @@ import java.time.Instant;
 @AllArgsConstructor
 @Entity
 @Table(name = "mouvementstock")
-@Builder
 public class MouvementStock extends AbstractEntity{
 
     @ManyToOne

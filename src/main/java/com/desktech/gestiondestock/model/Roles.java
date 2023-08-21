@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "role")
-@Builder
 public class Roles extends AbstractEntity{
 
     @Column(name = "roleName")

@@ -15,7 +15,6 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Entity
 @Table(name = "lignevente")
-@Builder
 public class LigneVente extends AbstractEntity{
 
     @Column(name = "quantite")
