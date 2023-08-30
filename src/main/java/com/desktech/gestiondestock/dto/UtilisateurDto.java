@@ -22,6 +22,8 @@ public class UtilisateurDto {
 
     private String email;
 
+    private String motDePasse;
+
     private Instant dateDeNaissance;
 
     private AdresseDto adresse;
