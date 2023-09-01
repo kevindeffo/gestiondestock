@@ -23,34 +23,34 @@ public class AdresseDto {
 
     private String pays;
 
-    public AdresseDto fromEntity(Adresse adresse){
-        if(adresse == null){
-            return null;
-//            TODO: throw an exception
-        }
-
-       return AdresseDto.builder()
-                .adresse1(getAdresse1())
-                .adresse2(getAdresse2())
-                .pays(getPays())
-                .ville(getCodePostale())
-                .codePostale(getCodePostale())
-               .build();
-    }
-
-    public Adresse toEntity(AdresseDto adresseDto){
-        if(adresseDto == null){
-            return null;
-//            TODO: throw an exception
-        }
-
-        Adresse adresse = new Adresse();
-
-        adresse.setAdresse1(adresseDto.getAdresse1());
-        adresse.setAdresse2(adresseDto.getAdresse2());
-        adresse.setPays(adresseDto.getPays());
-        adresse.setVille(adresseDto.getVille());
-        adresse.setCodePostale(adresseDto.getCodePostale());
-        return adresse;
-    }
+//    public AdresseDto fromEntity(Adresse adresse){
+//        if(adresse == null){
+//            return null;
+////            TODO: throw an exception
+//        }
+//
+//       return AdresseDto.builder()
+//                .adresse1(getAdresse1())
+//                .adresse2(getAdresse2())
+//                .pays(getPays())
+//                .ville(getCodePostale())
+//                .codePostale(getCodePostale())
+//               .build();
+//    }
+//
+//    public Adresse toEntity(AdresseDto adresseDto){
+//        if(adresseDto == null){
+//            return null;
+////            TODO: throw an exception
+//        }
+//
+//        Adresse adresse = new Adresse();
+//
+//        adresse.setAdresse1(adresseDto.getAdresse1());
+//        adresse.setAdresse2(adresseDto.getAdresse2());
+//        adresse.setPays(adresseDto.getPays());
+//        adresse.setVille(adresseDto.getVille());
+//        adresse.setCodePostale(adresseDto.getCodePostale());
+//        return adresse;
+//    }
 }

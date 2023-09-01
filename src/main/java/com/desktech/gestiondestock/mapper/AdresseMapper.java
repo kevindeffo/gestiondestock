@@ -5,7 +5,8 @@ import com.desktech.gestiondestock.model.Adresse;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+
+@Mapper(componentModel = "spring")
 public interface AdresseMapper {
     AdresseMapper INSTANCE = Mappers.getMapper(AdresseMapper.class);
     AdresseDto adressToDto(Adresse adresse);
