@@ -4,14 +4,18 @@ import com.desktech.gestiondestock.model.Adresse;
 import com.desktech.gestiondestock.model.Entreprise;
 import com.desktech.gestiondestock.model.Roles;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.util.List;
 
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class UtilisateurDto {
 
     private Integer id;
@@ -26,11 +30,12 @@ public class UtilisateurDto {
 
     private Instant dateDeNaissance;
 
-    private AdresseDto adresse;
 
     private String photo;
 
     private EntrepriseDto entreprise;
+
+    private AdresseDto adresse;
 
     private List<RolesDto> roles;
 }

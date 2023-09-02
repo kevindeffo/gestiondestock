@@ -25,32 +25,32 @@ public class CategoryDto {
 
 
 
-    public CategoryDto fromEntity(Category category){
-
-        if(category == null){
-            return null;
-//            TODO: throw an exception
-        }
-
-        return CategoryDto.builder()
-                .id(category.getId())
-                .code(category.getCode())
-                .designation(category.getDesignation())
-                .build();
-
-
-    }
-
-    public Category toEntity(CategoryDto categoryDto){
-        if(categoryDto == null){
-            return null;
-//            TODO: throw an exception
-        }
-        Category category = new Category();
-        category.setId(categoryDto.getId());
-        category.setDesignation(categoryDto.getDesignation());
-        category.setCode(categoryDto.getCode());
-
-        return category;
-    }
+//    public CategoryDto fromEntity(Category category){
+//
+//        if(category == null){
+//            return null;
+////            TODO: throw an exception
+//        }
+//
+//        return CategoryDto.builder()
+//                .id(category.getId())
+//                .code(category.getCode())
+//                .designation(category.getDesignation())
+//                .build();
+//
+//
+//    }
+//
+//    public Category toEntity(CategoryDto categoryDto){
+//        if(categoryDto == null){
+//            return null;
+////            TODO: throw an exception
+//        }
+//        Category category = new Category();
+//        category.setId(categoryDto.getId());
+//        category.setDesignation(categoryDto.getDesignation());
+//        category.setCode(categoryDto.getCode());
+//
+//        return category;
+//    }
 }

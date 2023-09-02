@@ -5,13 +5,17 @@ import com.desktech.gestiondestock.model.CommandeFournisseur;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class FournisseurDto {
 
     private Integer id;
@@ -27,7 +31,7 @@ public class FournisseurDto {
     private  String telephone;
 
 
-    AdresseDto addresse;
+    private AdresseDto addresse;
 
     private List<CommandeFournisseurDto> commandeFournisseurs;
 }

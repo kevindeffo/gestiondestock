@@ -5,13 +5,17 @@ import com.desktech.gestiondestock.model.Utilisateur;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class EntrepriseDto {
 
 
@@ -20,9 +24,6 @@ public class EntrepriseDto {
     private String nom;
 
     private String description;
-
-
-    private AdresseDto adresse;
 
     private String codeFiscal;
 
@@ -33,6 +34,8 @@ public class EntrepriseDto {
     private String numTel;
 
     private String siteWeb;
+
+    private AdresseDto adresse;
 
     private List<UtilisateurDto> utilisateurs;
 }
