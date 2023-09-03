@@ -29,7 +29,7 @@ public class Fournisseur extends AbstractEntity {
     @Column(name = "telephone")
     private  String telephone;
 
-    @Column(name = "identreprise")
+    @Column(name = "entreprise")
     private Integer idEntreprise;
 
     @Embedded
