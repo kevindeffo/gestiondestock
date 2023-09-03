@@ -10,4 +10,6 @@ public interface VenteMapper {
     VenteMapper INSTANCE = Mappers.getMapper(VenteMapper.class);
 
     VentesDto venteToDto(Ventes ventes);
+
+    Ventes DTOToEntity(VentesDto ventesDto);
 }

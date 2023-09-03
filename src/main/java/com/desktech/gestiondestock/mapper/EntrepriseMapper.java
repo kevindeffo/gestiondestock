@@ -11,4 +11,6 @@ public interface EntrepriseMapper {
 
     EntrepriseDto entrepriseToDto(Entreprise entreprise);
 
+    Entreprise DTOToEntity(EntrepriseDto entrepriseDto);
+
 }

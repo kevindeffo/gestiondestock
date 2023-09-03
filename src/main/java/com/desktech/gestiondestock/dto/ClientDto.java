@@ -3,6 +3,7 @@ package com.desktech.gestiondestock.dto;
 import com.desktech.gestiondestock.model.Adresse;
 import com.desktech.gestiondestock.model.Client;
 import com.desktech.gestiondestock.model.CommandeClient;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.OneToMany;
@@ -34,6 +35,7 @@ public class ClientDto {
 
     private AdresseDto addresse;
 
+    @JsonIgnore
     private List<CommandeClientDto> commandeClients;
 
 //    public ClientDto fromEntity(Client client){

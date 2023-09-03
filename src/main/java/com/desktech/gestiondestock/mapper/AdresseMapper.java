@@ -6,8 +6,9 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 
-@Mapper(componentModel = "spring")
+@Mapper()
 public interface AdresseMapper {
     AdresseMapper INSTANCE = Mappers.getMapper(AdresseMapper.class);
-    AdresseDto adressToDto(Adresse adresse);
+    AdresseDto adresseToDto(Adresse adresse);
+    Adresse dtoToAdresse(AdresseDto adresseDto);
 }

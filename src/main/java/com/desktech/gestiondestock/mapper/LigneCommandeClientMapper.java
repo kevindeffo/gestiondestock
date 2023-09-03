@@ -9,4 +9,6 @@ public interface LigneCommandeClientMapper {
     LigneCommandeClientMapper INSTANCE = Mappers.getMapper(LigneCommandeClientMapper.class);
 
     LigneCommandeClientDto ligneCommandeClientToDto(LigneCommandeClient ligneCommandeClient);
+
+    LigneCommandeClient DTOToEntity(LigneCommandeClientDto ligneCommandeClientDto);
 }

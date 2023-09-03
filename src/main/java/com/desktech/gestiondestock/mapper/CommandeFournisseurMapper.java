@@ -11,4 +11,6 @@ public interface CommandeFournisseurMapper {
 
     CommandeFournisseurDto commandeFournisseurToDto(CommandeFournisseur commandeFournisseur);
 
+    CommandeFournisseur DTOToEntity(CommandeFournisseurDto commandeFournisseurDto);
+
 }

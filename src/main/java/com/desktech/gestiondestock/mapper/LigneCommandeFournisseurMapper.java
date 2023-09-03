@@ -9,4 +9,6 @@ public interface LigneCommandeFournisseurMapper {
     LigneCommandeFournisseurMapper INSTANCE = Mappers.getMapper(LigneCommandeFournisseurMapper.class);
 
     LigneCommandeFournisseurDto ligneCommandeFournisseurToDto(LigneCommandeFournisseur ligneCommandeFournisseur);
+
+    LigneCommandeFournisseur DTOToEntity(LigneCommandeFournisseurDto ligneCommandeFournisseurDto);
 }

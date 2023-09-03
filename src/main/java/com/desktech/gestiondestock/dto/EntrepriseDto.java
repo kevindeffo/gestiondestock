@@ -2,6 +2,7 @@ package com.desktech.gestiondestock.dto;
 
 import com.desktech.gestiondestock.model.Adresse;
 import com.desktech.gestiondestock.model.Utilisateur;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.OneToMany;
@@ -37,5 +38,6 @@ public class EntrepriseDto {
 
     private AdresseDto adresse;
 
+    @JsonIgnore
     private List<UtilisateurDto> utilisateurs;
 }
