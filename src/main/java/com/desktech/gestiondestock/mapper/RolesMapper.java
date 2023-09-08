@@ -11,4 +11,6 @@ public interface RolesMapper {
     RolesMapper INSTANCE = Mappers.getMapper(RolesMapper.class);
 
     RolesDto rolesToDto(Roles roles);
+
+    Roles DTOToEntity(RolesDto rolesDto);
 }

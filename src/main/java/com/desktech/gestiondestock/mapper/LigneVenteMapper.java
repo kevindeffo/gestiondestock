@@ -9,4 +9,6 @@ public interface LigneVenteMapper {
     LigneVenteMapper INSTANCE = Mappers.getMapper(LigneVenteMapper.class);
 
     LigneVenteDto ligneVenteToDto(LigneVente ligneVente);
+
+    LigneVente DTOToEntity(LigneVenteDto ligneVenteDto);
 }

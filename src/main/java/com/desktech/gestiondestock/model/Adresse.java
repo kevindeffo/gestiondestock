@@ -24,4 +24,7 @@ public class Adresse {
 
     @Column(name = "pays")
     private String pays;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 }

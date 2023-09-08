@@ -9,4 +9,6 @@ import org.mapstruct.factory.Mappers;
 public interface CommandeClientMapper {
     CommandeClientMapper INSTANCE = Mappers.getMapper(CommandeClientMapper.class);
     CommandeClientDto commandeClientToDto(CommandeClient commandeClient);
+
+    CommandeClient DTOToEntity(CommandeClientDto commandeClientDto);
 }

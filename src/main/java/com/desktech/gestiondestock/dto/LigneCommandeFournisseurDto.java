@@ -1,5 +1,6 @@
 package com.desktech.gestiondestock.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,5 +23,9 @@ public class LigneCommandeFournisseurDto {
 
     private FournisseurDto fournisseur;
 
+
     private CommandeFournisseurDto commandeFournisseur;
+
+    @JsonIgnore
+    private List<LigneCommandeFournisseurDto> ligneCommandeFournisseur;
 }

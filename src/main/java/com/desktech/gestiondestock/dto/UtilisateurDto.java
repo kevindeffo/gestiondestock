@@ -3,6 +3,7 @@ package com.desktech.gestiondestock.dto;
 import com.desktech.gestiondestock.model.Adresse;
 import com.desktech.gestiondestock.model.Entreprise;
 import com.desktech.gestiondestock.model.Roles;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -37,5 +38,6 @@ public class UtilisateurDto {
 
     private AdresseDto adresse;
 
+    @JsonIgnore
     private List<RolesDto> roles;
 }
