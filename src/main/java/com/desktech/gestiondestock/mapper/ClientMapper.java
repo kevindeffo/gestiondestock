@@ -11,5 +11,5 @@ public interface ClientMapper {
 
     ClientDto clientToDto(Client client);
 
-    ClientDto DTOToEntity(ClientDto clientDto);
+    Client DTOToEntity(ClientDto clientDto);
 }

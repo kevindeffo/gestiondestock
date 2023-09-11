@@ -48,7 +48,7 @@ public class ArticleServiceImpl implements ArticleService {
         Optional<Article> article = articleRepository.findById(id);
 
 
-        ArticleDto articleDto = ArticleMapper.INSTANCE.articleToDto(article.get());
+//        ArticleDto articleDto = ArticleMapper.INSTANCE.articleToDto(article.get());
 
         return Optional.of(ArticleMapper.INSTANCE.articleToDto(article.get())).orElseThrow(
                 ()->new EntityNotFoundException("Aucun article ne correspond a l' ID "+id, ErrorCodes.ARTICLE_NOT_FOUND)

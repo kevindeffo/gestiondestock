@@ -10,6 +10,8 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper()
 public interface ArticleMapper {
+
+    ArticleMapper INSTANCE = Mappers.getMapper(ArticleMapper.class);
     ArticleDto articleToDto(Article article);
 
     Article DtoToArticle(ArticleDto articleDto);
