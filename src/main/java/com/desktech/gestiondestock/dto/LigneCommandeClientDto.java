@@ -2,6 +2,7 @@ package com.desktech.gestiondestock.dto;
 
 import com.desktech.gestiondestock.model.Article;
 import com.desktech.gestiondestock.model.CommandeClient;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -23,7 +24,7 @@ public class LigneCommandeClientDto {
     private BigDecimal quantite;
 
     private BigDecimal prixUnitaire;
-
+    @JsonIgnore
     private CommandeClientDto commandeClient;
 
     private ArticleDto article;

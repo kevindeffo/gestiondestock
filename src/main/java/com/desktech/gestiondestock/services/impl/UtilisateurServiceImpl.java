@@ -26,7 +26,7 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     public UtilisateurDto save(UtilisateurDto utilisateurDto) {
         if (utilisateurDto == null){
             log.error("Utilisateur null {}", utilisateurDto);
-        }
+        } 
         return UtilisateursMapper.INSTANCE.utilisateurToDto(utilisateurRepository.save(UtilisateursMapper.INSTANCE.DTOToEntity(utilisateurDto)));
     }
 
