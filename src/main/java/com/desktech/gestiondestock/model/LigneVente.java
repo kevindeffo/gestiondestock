@@ -26,6 +26,9 @@ public class LigneVente extends AbstractEntity{
     @Column(name = "identreprise")
     private Integer idEntreprise;
 
+    @OneToOne
+    private Article article;
+
     @ManyToOne
     @JoinColumn(name = "idvente")
     private  Ventes vente;

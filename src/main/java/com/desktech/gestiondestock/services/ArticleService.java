@@ -10,4 +10,8 @@ public interface ArticleService {
     ArticleDto findByCode(String code);
     List<ArticleDto> findAll();
     void delete(Integer id);
+
+    interface CommandeFournisseurService {
+
+    }
 }

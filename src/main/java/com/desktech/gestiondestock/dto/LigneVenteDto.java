@@ -22,4 +22,6 @@ public class LigneVenteDto {
     private BigDecimal prixUnitaire;
 
     private VentesDto vente;
+
+    private ArticleDto article;
 }

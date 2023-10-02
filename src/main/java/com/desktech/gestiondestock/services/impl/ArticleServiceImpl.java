@@ -12,6 +12,7 @@ import com.desktech.gestiondestock.validator.ArticleValidator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Optional;
@@ -58,7 +59,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public ArticleDto findByCode(String code) {
 
-        if(code == null){
+        if(!StringUtils.hasLength(code)){
             log.error("Null codeArticle");
             return null;
         }

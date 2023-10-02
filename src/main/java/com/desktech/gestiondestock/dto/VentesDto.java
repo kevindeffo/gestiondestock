@@ -1,5 +1,6 @@
 package com.desktech.gestiondestock.dto;
 
+import com.desktech.gestiondestock.model.LigneVente;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
+import java.util.List;
 
 @Builder
 @Data
@@ -22,7 +24,8 @@ public class VentesDto {
 
     private Instant dateVente;
 
-    @JsonIgnore
+
     private String commentaire;
+    private List<LigneVenteDto> ligneVentes;
 
 }

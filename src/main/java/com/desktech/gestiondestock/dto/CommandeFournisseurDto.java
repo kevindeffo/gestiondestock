@@ -24,6 +24,6 @@ public class CommandeFournisseurDto {
 
     private FournisseurDto fournisseur;
 
-    @JsonIgnore
+
     private List<LigneCommandeFournisseurDto> ligneCommandeFournisseur;
 }

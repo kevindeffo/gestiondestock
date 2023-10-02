@@ -3,6 +3,7 @@ package com.desktech.gestiondestock.services.impl;
 import com.desktech.gestiondestock.dto.EntrepriseDto;
 import com.desktech.gestiondestock.enums.ErrorCodes;
 import com.desktech.gestiondestock.exception.EntityNotFoundException;
+import com.desktech.gestiondestock.exception.InvalidEntityException;
 import com.desktech.gestiondestock.mapper.EntrepriseMapper;
 import com.desktech.gestiondestock.repository.EntrepriseRepository;
 import com.desktech.gestiondestock.services.EntrepriseService;
@@ -32,7 +33,7 @@ public class EntrepriseServiceImpl implements EntrepriseService {
 
         if(!errors.isEmpty()){
             log.error("Invalid Entreprise {}", entrepriseDto);
-            return null;
+            throw new InvalidEntityException("Entreprise invalide", ErrorCodes.ENTREPRISE_NOT_VALID);
         }
         return EntrepriseMapper.INSTANCE.entrepriseToDto(entrepriseRepository.save(EntrepriseMapper.INSTANCE.DTOToEntity(entrepriseDto)));
     }

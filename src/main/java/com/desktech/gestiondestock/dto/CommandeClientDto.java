@@ -23,6 +23,6 @@ public class CommandeClientDto {
 
     private ClientDto client;
 
-    @JsonIgnore
+
     private List<LigneCommandeClientDto> ligneCommandeClient;
 }
