@@ -18,6 +18,8 @@ public class ArticleController  implements ArticleApi {
     }
     @Override
     public ArticleDto save(ArticleDto articleDto) {
+        System.out.println("create article");
+        System.out.println(articleDto);
         return articleService.save(articleDto);
     }
 

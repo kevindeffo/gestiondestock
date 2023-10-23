@@ -31,12 +31,27 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public ArticleDto save(ArticleDto articleDto) {
+        System.out.println("-------- article Service ----------");
         List<String> errors = ArticleValidator.validate(articleDto);
         if(!errors.isEmpty()){
             log.error("Article is not valid {}", articleDto);
             throw new InvalidEntityException("The Entity is not valid", ErrorCodes.ARTICLE_NOT_VALIDE, errors);
         }
-        return ArticleMapper.INSTANCE.articleToDto(articleRepository.save(ArticleMapper.INSTANCE.DtoToArticle(articleDto)));
+
+        System.out.println("------------ Transform article to Dto ---------------");
+
+        Article article = ArticleMapper.INSTANCE.DtoToArticle(articleDto);
+
+        System.out.println("------------ Before save ---------------");
+
+        Article articleResp = articleRepository.save(article);
+
+        System.out.println("------------ transform response toDTo ---------------");
+        ArticleDto resp = ArticleMapper.INSTANCE.articleToDto(articleResp);
+
+        System.out.println("------------ after transformation ---------------");
+        System.out.println(resp);
+        return resp;
     }
 
     @Override

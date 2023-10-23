@@ -1,5 +1,6 @@
 package com.desktech.gestiondestock.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -27,5 +28,6 @@ public class Category extends AbstractEntity {
 
 
     @OneToMany(mappedBy = "category")
+    @JsonIgnore
     private List<Article> articles;
 }

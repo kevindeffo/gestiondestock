@@ -20,8 +20,8 @@ public class CategoryDto {
     private String code;
     private String designation;
 
-    @JsonIgnore
-    private List<ArticleDto> articles;
+//    @JsonIgnore
+//    private List<ArticleDto> articles;
 
 
 
